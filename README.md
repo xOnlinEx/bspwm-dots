@@ -8,7 +8,6 @@ Here are some details about my setup:
 |    Terminal   |    Kitty   |
 |      Bar      |   Polybar  |
 |   Compositor  |    picom   |
-|     Editor    |   neovim   |
 | Launcher Apps |    rofi    |
 
 ### Screenshot
