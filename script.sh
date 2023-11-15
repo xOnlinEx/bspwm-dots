@@ -5,7 +5,6 @@ git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si
 
 # volver al home
-cd ~
 
 # intalar lo necesario
 yay -S bspwm rofi nitrogen polybar kitty dunst \ 
@@ -15,8 +14,8 @@ yay -S bspwm rofi nitrogen polybar kitty dunst \
 git clone https://github.com/xOnlinE/bspwm
 
 # copiamos las configuraciones
-cp -rf ./bspwm/bspwm ~/.config
-cp -rf ./bspwm/sxhkd ~/.config
-cp -rf ./bspwm/rofi ~/.config
-cp -rf ./bspwm/dunst ~/.config
-cp -rf ./bspwm/picom ~/.config
+cp -rf bspwm ~/.config
+cp -rf sxhkd ~/.config
+cp -rf rofi ~/.config
+cp -rf dunst ~/.config
+cp -rf picom ~/.config
