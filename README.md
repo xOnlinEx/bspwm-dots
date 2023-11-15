@@ -18,9 +18,6 @@ Here are some details about my setup:
 - git clone https://aur.archlinux.org/yay.git
 - cd yay && makepkg -si
 
-# volver al home
-- cd ~
-
 # intalar lo necesario
 - sudo -S bspwm rofi nitrogen polybar kitty dunst
 - yay -S ttf-iosevka-nerd picom-simpleanims-git
