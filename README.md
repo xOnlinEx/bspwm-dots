@@ -14,10 +14,6 @@ Here are some details about my setup:
 ![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/1.png)
 ![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/2.png)
 
-# instalar yay
-- git clone https://aur.archlinux.org/yay.git
-- cd yay && makepkg -si
-
 # intalar lo necesario
 - sudo -S bspwm rofi nitrogen polybar kitty dunst
 - yay -S ttf-iosevka-nerd picom-simpleanims-git
