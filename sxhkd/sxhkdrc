@@ -119,14 +119,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-# xOnlinEx
-# super + shift + t
-#     thunar
-# super + shift + n
-#     kitty -e ncmpcpp
-# super + shift + r
-#     kitty -e ranger
-# super + shift + c
-#     google-chrome-stable
-# super + shift + v
-#     code
+super + shift + s
+	~/.config/rofi/scripts/screenshot
+super + shift + p
+	~/.config/rofi/scripts/powermenu

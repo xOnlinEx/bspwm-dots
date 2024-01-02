@@ -1,0 +1,10 @@
+configuration {
+    font: "CaskaydiaCove Nerd Font 12";
+}
+
+* {
+    prelight: #00FF00;
+}
+
+@title "Hello World";
+@markup  "<b>Hello, World!</b>";

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Function to shut down the system
+shutdown_system() {
+    systemctl poweroff
+}
+
+# Function to restart the system
+restart_system() {
+    systemctl reboot
+}
+
+# Menu options
+options="Shut down\nRestart"
+
+# Show the Rofi menu and capture the selected option
+selected_option=$(echo -e "$options" | rofi -dmenu -p "Select an option:" -timeout 3)
+
+# Execute the corresponding function based on the selected option
+case "$selected_option" in
+    "Shut down") shutdown_system ;;
+    "Restart") restart_system ;;
+    *) ;;
+esac
+

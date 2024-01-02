@@ -1,4 +1,4 @@
-/*config*/
+
 configuration {
     show-icons:                 true;
     drun-display-format:        "{name}";
@@ -7,44 +7,48 @@ configuration {
 
 
 * {
-    font: "JetBrainsMono 12";
+    font: "SF PRO Display 12";
 }
 
 
-/*window*/
-window {
-    width: 800px;
 
+window {
+    width: 400px;
     border: 0px solid;
     border-color: @foreground;
-    border-radius: 12px;
-
-    background-color: #11111b ;
+    border-radius: 10px;
+    background-color: #141b1e;
     padding: 0px;
 }
 
 
-/*container!*/
+
 mainbox {
     spacing: 10px;
     padding: 20px;
+    orientation: horizontal;
+    children: [ "boxtemp" ];
+}
+
+boxtemp {
+  spacing: 10px;
     children: [ "inputbar", "listview" ];
 }
 
 
-/*inputbar*/
 
-/*-conteiner inputbar*/
+
+
 inputbar {
     spacing: 10px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: #11111b ;
-    text-color: #cdd6f4 ;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #232a2d;
+    text-color: #dadada ;
     children: [ "textbox-prompt-colon", "entry" ];
 }
 
-/*-icons*/
+
 textbox-prompt-colon {
     expand: false;
     str: "";
@@ -53,7 +57,7 @@ textbox-prompt-colon {
     vertical-align: 0.5;
 }
 
-/*-promt*/
+
 entry {
     background-color: inherit;
     text-color: inherit;
@@ -61,41 +65,41 @@ entry {
     placeholder-color: inherit;
 }
 
-/*list elemens*/
+
 listview {
-    columns: 2;
+    columns: 1;
     lines: 6;
     scrollbar: false;
     spacing: 10px;
-    text-color: #cdd6f4;
+    text-color: #dadada;
     background-color: transparent;
     border: 0px;
 }
 
 
-/*elements*/
+
 element {
     spacing: 15px;
     padding: 8px;
     border-radius: 10px;
-    background-color: #11111b;
-    text-color:#cdd6f4;
+    background-color: #232a2d;
+    text-color:#dadada;
 }
 
 element.normal.normal {
-    background-color: #1e1e2e;
-    text-color:#cdd6f4;
+    background-color: #232a2d;
+    text-color:#dadada;
 }
 
 
 element.alternate.normal {
-    background-color: #1e1e2e;
-    text-color: #cdd6f4;
+    background-color: #232a2d;
+    text-color: #dadada;
 }
 
 element.selected.normal {
-    background-color: #b4befe;
-    text-color: #11111b;
+    background-color: #8ccf7e;
+    text-color: #141b1e;
 }
 
 element-icon {
@@ -108,12 +112,3 @@ element-text {
     text-color:  inherit;
     vertical-align: 0.5;
 }
-
-
-
-
-
-
-
-
-
