@@ -1,6 +1,9 @@
 #
 # wm independent hotkeys
 #
+# Screenshot
+super + shift + s
+  ~/.config/rofi/screenshot/screenshot-background area
 
 # terminal emulator
 super + Return
@@ -119,7 +122,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-super + shift + s
-	~/.config/rofi/scripts/screenshot
-super + shift + p
-	~/.config/rofi/scripts/powermenu
