@@ -12,3 +12,4 @@ Here are some details about my setup:
 
 ### Screenshot
 ![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/1.png)
+![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/2.png)
