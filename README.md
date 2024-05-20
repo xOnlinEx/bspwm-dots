@@ -6,8 +6,8 @@ Here are some details about my setup:
 |:-------------:|------------|
 |       OS      | Arch Linux |
 |    Terminal   |    Kitty   |
-|      Bar      |   Polybar  |
-|   Compositor  |    picom   |
+|      Bar      |     Eww    |
+|   Compositor  |   picom    |
 | Launcher Apps |    rofi    |
 
 ### Screenshot
