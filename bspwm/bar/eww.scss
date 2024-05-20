@@ -1,0 +1,127 @@
+* {
+  all: unset;
+}
+
+// Decay colors
+$background: #0d0f18;
+$foreground: #a5b6cf;
+
+$background-alt: #1a1c25;
+$gray: #1c1e27;
+$red: #dd6777;
+$green: #90ceaa;
+$yellow: #ecd3a0;
+$blue: #86aaec;
+$magenta: #c296eb;
+$cyan: #93cee9;
+$white: #8596af;
+$archlogo: #0f94d2;
+
+// The bar
+.eww_bar {
+  background-color: $background;
+  border-radius: 0px;
+}
+.profile{
+  margin: 0.5rem 0 0 0;
+}
+
+// Workspaces
+.works {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 18px;
+  background-color: $background-alt;
+}
+
+.workspace-focused {
+  background: linear-gradient($red, $magenta, $blue);
+  border-radius: 18px;
+  margin: 0.2rem 0;
+  padding: 1rem 0.5rem;
+}
+
+.workspace-occupied {
+  background: $blue;
+  border-radius: 18px;
+  margin: 0.2rem 0;
+  padding: 5px 0px;
+}
+
+.workspace-empty {
+  background: #1c252c;
+  border-radius: 18px;
+  margin: 0.2rem 0;
+  padding: 5px 0px;
+}
+
+
+// System Tray
+.tray menu {
+  padding: 5px 5px;
+  background-color: $background;
+
+  >menuitem {
+    font-family: ZedMono Nerd Font;
+    font-size: 14px;
+    color: $foreground;
+
+    &:disabled label {
+      color: $background-alt;
+    }
+
+    &:hover {
+      background-color: $gray;
+    }
+  }
+
+  separator {
+    background-color: $foreground;
+    padding-top: 1px;
+
+    &:last-child {
+      padding: unset;
+    }
+  }
+}
+
+.trayicon {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  min-height: 25px;
+  min-width: 7px;
+  margin: 0 0 0 0.6rem;
+  color: $green;
+}
+
+scale trough {
+  all: unset;
+  background-color: $background;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 14px;
+}
+
+.volbar trough highlight {
+  background: linear-gradient($red, $magenta, $blue);
+  border-radius: 5px;
+}
+
+.time {
+  font-family: ZedMono NF;
+  font-weight: bold;
+  font-size: 1.2em;
+  background: linear-gradient($red, $magenta, $blue);
+  color: $background;
+  border-radius: 18px;
+  padding: 0.7rem 0 0.5rem 0;
+}
+
+.end{
+  padding: 0 5px 10px 5px;
+}
+.control{
+  background: $background-alt;
+  border-radius: 18px;
+  padding: 1rem 0 0.8rem 0;
+}

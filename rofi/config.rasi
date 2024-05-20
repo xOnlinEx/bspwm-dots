@@ -1,114 +1,104 @@
-
-configuration {
-    show-icons:                 true;
-    drun-display-format:        "{name}";
+configuration{
+    modi: "run,drun,window";
+    lines: 5;
+    font: "SF Pro Display 11";
+    show-icons: true;
+    icon-theme: "Zafiro-icons-Dark";
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: " 󱂬  Window";
 }
 
+@theme "themes/decayce"
 
-
-* {
-    font: "SF PRO Display 12";
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
 }
-
-
 
 window {
-    width: 400px;
-    border: 0px solid;
-    border-color: @foreground;
-    border-radius: 10px;
-    background-color: #141b1e;
-    padding: 0px;
+    height: 500px;
+    width: 450px;
+    border: 1px;
+    border-radius: 18px;
+    border-color: @border-col;
+    background-color: @bg-col;
+    padding: 10px;
 }
-
-
 
 mainbox {
-    spacing: 10px;
-    padding: 20px;
-    orientation: horizontal;
-    children: [ "boxtemp" ];
+    background-color: @bg-col;
 }
-
-boxtemp {
-  spacing: 10px;
-    children: [ "inputbar", "listview" ];
-}
-
-
-
-
 
 inputbar {
-    spacing: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #232a2d;
-    text-color: #dadada ;
-    children: [ "textbox-prompt-colon", "entry" ];
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 18px;
+    padding: 2px;
 }
 
+prompt {
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 18px;
+    margin: 20px 0px 0px 20px;
+}
 
 textbox-prompt-colon {
     expand: false;
-    str: "";
-    background-color: inherit;
-    text-color: inherit;
-    vertical-align: 0.5;
+    str: ":";
 }
-
 
 entry {
-    background-color: inherit;
-    text-color: inherit;
-    placeholder: "Search";
-    placeholder-color: inherit;
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
 }
-
 
 listview {
-    columns: 1;
-    lines: 6;
-    scrollbar: false;
-    spacing: 10px;
-    text-color: #dadada;
-    background-color: transparent;
-    border: 0px;
+    border: 0px 0px 0px;
+    margin: 10px 5px 5px 10px;
+    background-color: @bg-col;
 }
-
-
 
 element {
-    spacing: 15px;
-    padding: 8px;
-    border-radius: 10px;
-    background-color: #232a2d;
-    text-color:#dadada;
-}
-
-element.normal.normal {
-    background-color: #232a2d;
-    text-color:#dadada;
-}
-
-
-element.alternate.normal {
-    background-color: #232a2d;
-    text-color: #dadada;
-}
-
-element.selected.normal {
-    background-color: #8ccf7e;
-    text-color: #141b1e;
+    padding: 5px;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
 }
 
 element-icon {
-    background-color: transparent;
-    text-color: inherit;
-    size: 32px;
+    size: 25px;
 }
-element-text {
+
+element selected {
+    background-image: linear-gradient(#86aaec, #c296eb, #dd6777);
     background-color: transparent;
-    text-color:  inherit;
-    vertical-align: 0.5;
+    text-color: @bg-col;
+    border-radius: 10px;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button {
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @fg-col;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
 }

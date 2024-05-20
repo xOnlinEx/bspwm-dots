@@ -1,49 +1,47 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
+#  ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗  ██████╗
+#  ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗██╔════╝
+#  ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝██║
+#  ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗██║
+#  ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██║  ██║╚██████╗
+#  ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+#	- xOnlinEx
+#	- https://github.com/xOnlinEx/dotfiles
+#	- xonlinex.dev@gmail.com
+#
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+bspc monitor -d I II III IV V VI
 
-bspc monitor -d I II III IV V VI #VII VIII IX X
+bspc config top_padding         5
+bspc config left_padding        52
+bspc config right_padding       5
+bspc config bottom_padding      5
+bspc config border_width        0
+bspc config window_gap          10
 
-bspc config bottom_padding        0
-bspc config left_padding          0
-bspc config right_padding         0
-bspc config top_padding           30
-bspc config window_gap            5
-bspc config border_width          0
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
 
-bspc config split_ratio           0.52
-bspc config borderless_monocle    true
-bspc config gapless_monocle       true
-bspc config focus_follows_pointer true
+# Reload sxhkd daemon
+sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 
-bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
+# Launch bar
+eww -c "$HOME"/.config/bspwm/bar open bar &
 
-nitrogen --restore
+# Launch dunst notification daemon
+dunst -config "$HOME"/.config/bspwm/dunstrc &
+
 
 # Fix cursor
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
 
-# Polybar
-~/.config/polybar/launch.sh &
+# Wallpaper
+nitrogen --restore &
 
-# Notification
-dunst -conf ~/.config/dunst/dunstrc &
+# Launch picom
+pidof -q picom || { picom --config "$HOME"/.config/bspwm/picom.conf & }
 
-## Fix java applications
-wmname LG3D &
-export _JAVA_AWT_WM_NONREPARENTING=1 &
-
-# Picom
-if ! pidof picom > /dev/null; then
-    picom -b --config "$HOME"/.config/picom/picom.conf &
-fi
-
-# Polkit
-if ! pidof -q polkit-gnome-authentication-agent-1 > /dev/null; then
-    /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-fi
-
+# xcorners
+xcorners -W 1873 -H 1080 -x 47 -c 0d0f18ff -r 18 -b -1 &
