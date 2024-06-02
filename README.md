@@ -16,6 +16,27 @@ Here are some details about my setup:
 
 - ** Utilidades **
 ```sh
+paru -S wget unrar unzip zip
+```
+### personalizar la terminal kitty
+```sh
+# Instalar oh-my-zsh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+```
+
+### Instalar plugins: `autocompletado`, `sugerencias` y `fzf`
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth 1 https://github.com/unixorn/fzf-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-zsh-plugin
+```
+
+### Copiar configuracion de la terminal kitty
+```sh
+cp -r ./kitty "$HOME".config
+```
+- ** Utilidades **
+```sh
 paru -S nwg-look
 ```
 
