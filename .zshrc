@@ -10,18 +10,17 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # rounded theme 'https://github.com/nullxception/roundy'
-zinit light nullxception/roundy
+#zinit light metaory/zsh-roundy-prompt
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
 # Add in snippets
 zinit snippet OMZP::git
 
 # Load completions
-autoload -U compinit && compinit
+#autoload -U compinit && compinit
 
 # Keybindings
 bindkey '^p' history-search-backward
@@ -40,7 +39,6 @@ setopt hist_save_no_dups
 
 # Completions styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls $realpath'
 
 # Aliases
 alias ls="eza --icons"
@@ -51,3 +49,10 @@ alias lst="eza --icons -T"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Starship prompt
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
