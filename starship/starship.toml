@@ -3,12 +3,14 @@
 ## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
 
 # Sets user-defined palette
-palette = "catppuccin_mocha"
+palette = "dark_decay"
 
 # Setups
-format="$directory$git_branch$character"
-right_format = """$git_status$cmd_duration"""
-add_newline = false 
+#format="$directory$git_branch$character"
+format="$directory$git_branch"
+#right_format = """$git_status$cmd_duration"""
+right_format = """$character"""
+add_newline = false
 
 # Other languages configurations:
 c.disabled = true
@@ -29,19 +31,19 @@ format = ' [$symbol$environment](dimmed green) '
 
 # Prompt symbols 
 [character]
-success_symbol = "[](green bold)"
-error_symbol = "[](pink)"
+success_symbol = "[ ](green bold)"
+error_symbol = "[ ](red)"
 vicmd_symbol = "[](peach)"
 
 [directory]
-format = "[]($style)[ ](bg:base fg:pink)[$path](bg:base fg:lavender bold)[ ]($style)"
-style = "bg:none fg:base"
+format = "[]($style)[󰉋 ](bg:blue fg:background)[$path](bg:blue fg:background bold)[ ]($style)"
+style = "bg:none fg:blue"
 truncation_length = 3
 truncate_to_repo=false
 
 [git_branch]
-format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:lavender)[ ]($style)"
-style = "bg:none fg:base"
+format = "[]($style)[[ ](bg:blue fg:background bold)$branch](bg:blue fg:background)[ ]($style)"
+style = "bg:none fg:blue"
 
 [git_status]
 # $all status$ahead_behind
@@ -66,30 +68,11 @@ format = "[]($style)[[神](bg:base fg:flamingo bold)$duration](bg:base fg:tex
 disabled = false
 style = "bg:none fg:base"
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[palettes.dark_decay]
+background = "#101419"
+foreground = "#b6beca"
+red = "#e05f65"
+green = "#78dba9"
+yellow = "#f1cf8a"
+blue = "#70a5eb"
+magenta = "#c68aee"

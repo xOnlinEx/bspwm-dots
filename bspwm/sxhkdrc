@@ -10,6 +10,9 @@ super + shift + s
 super + shift + p
 	"$HOME"/.config/bspwm/scripts/xcolor.sh
 
+# Thunar
+super + e
+	thunar
 # rotate window
 super + r 
 	bspc node @/ -R 90

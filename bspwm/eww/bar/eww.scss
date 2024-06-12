@@ -1,0 +1,129 @@
+* {
+  all: unset;
+}
+
+// dark-decay colors
+$background:#101419;
+$foreground: #b6beca;
+
+$black: #1c252c;
+$red: #e05f65;
+$green: #78dba9;
+$yellow:#f1cf8a;
+$blue: #70a5eb;
+$magenta:#c68aee;
+$cyan:#74bee9;
+$white: #dee1e6;
+
+// The bar
+.eww_bar {
+  background: $background;
+  border-radius: 10px;
+}
+
+.profile {
+  margin: 0.7rem 0 0 0;
+}
+
+// Workspaces
+.works {
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background: $black;
+  padding: 0.6rem;
+}
+
+.workspace-focused {
+  background: $green;
+  color: $background;
+  border-radius: 10px;
+  margin: 0.2rem 0;
+  padding: 0.3rem 0.6rem;
+}
+
+.workspace-occupied {
+  border-radius: 18px;
+  margin: 0.2rem 0;
+  padding: 5px 0px;
+  color: $white;
+}
+
+.workspace-empty {
+  border-radius: 18px;
+  margin: 0.2rem 0;
+  padding: 5px 0px;
+  color: $foreground;
+  opacity: 0.4;
+}
+
+
+// System Tray
+.tray menu {
+  padding: 5px 5px;
+  background-color: $background;
+
+  >menuitem {
+    font-family: JetBrainsMono NF;
+    font-size: 14px;
+    color: $white;
+
+    &:disabled label {
+      color: $background;
+    }
+
+    &:hover {
+      background-color: $red;
+    }
+  }
+
+  separator {
+    background-color: $white;
+    padding-top: 1px;
+
+    &:last-child {
+      padding: unset;
+    }
+  }
+}
+
+.trayicon {
+  background-repeat: no-repeat;
+  background-size: 20px;
+  min-height: 25px;
+  min-width: 7px;
+  color: $white;
+}
+
+scale trough {
+  all: unset;
+  background-color: $black;
+  border-radius: 5px;
+  min-height: 80px;
+  min-width: 16px;
+}
+
+.volbar trough highlight {
+  background: $green;
+  border-radius: 5px;
+}
+
+.time {
+  font-family: JetBrainsMono NF;
+  font-weight: bold;
+  font-size: 1.2em;
+  background: $black;
+  color: $white;
+  border-radius: 10px;
+  padding: 0.7rem 0 0.5rem 0;
+}
+
+.end {
+  padding: 0 5px 10px 5px;
+}
+
+.control {
+  background: $black;
+  border-radius: 10px;
+  padding: 1rem 0rem ;
+}

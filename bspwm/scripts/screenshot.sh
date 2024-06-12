@@ -39,7 +39,7 @@ _AUTHOR_COLOR_='#0d0f18'
 
 # Get Lists Font With "convert -list font | grep -iE 'font:.*' | nl"
 _FONT_SIZE_=13
-_FONT_='ZedMono-NF'
+_FONT_='JetBrainsMono-NF-Regular'
 
 # =============================================
 
