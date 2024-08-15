@@ -23,14 +23,14 @@ _ORIGINAL_DIR_=$_SCREENSHOT_DIR_/Original
 _LOG_FILE_="$_SCREENSHOT_DIR_/.screensht.log"
 
 # Color
-_FG_COLOR_='#a5b6cf'
-_BG_COLOR_='#90ceaa'
+_FG_COLOR_='#181616'
+_BG_COLOR_='#8a9a7b'
 _BG_SIZE_=10
 
 # Border Size Applied when value greater than or equal 3
 _BORDER_SIZE_=0
 _SHADOW_SIZE_='100x30+0+16'  # [ weight ] x [ radius ] + [ horizontal ] x [ vertical ]
-_ROUNDED_CORNER_=18
+_ROUNDED_CORNER_=10
 
 # Author Config
 _AUTHOR_POST_=( 'South' '+0+15' )

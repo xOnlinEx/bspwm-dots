@@ -1,0 +1,70 @@
+@import "shared/settings.rasi" * {
+    background-color: @bg;
+    font: "Rubik Regular 11";
+}
+window {
+    width: 400px;
+    height: 100%;
+    location: east;
+}
+
+mainbox {
+    background-color: @bg;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    children: [entry];
+    background-image: @network-header;
+    padding: 20px 0px;
+}
+
+prompt {
+    background-color: @bg-light;
+    padding: 5px 10px;
+    border-radius: 5px 0px 0px 5px;
+    color: @fg;
+}
+
+entry {
+    background-color: @bg;
+    padding: 10px 20px;
+    margin: 100px 20px 0px 20px;
+    color: @fg;
+    border-radius: 7px;
+    placeholder: "Search network";
+    placeholder-color: #b3b7bd;
+}
+
+listview {
+    columns: 1;
+    spacing: 5px;
+    padding: 20px;
+    fixed-columns: true;
+    background-color: transparent;
+}
+
+element {
+    background-color: transparent;
+    padding: 15px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    children: [element-text];
+}
+
+element selected {
+    background-color: @bg-hover;
+}
+
+element-text {
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    color: @fg;
+    background-color: transparent;
+    padding: 0px 5px;
+    cursor: inherit;
+}
+
+element-text selected {
+    color: @fg-hover;
+}

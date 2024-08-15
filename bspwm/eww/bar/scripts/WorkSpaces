@@ -27,12 +27,12 @@ roman_to_arabic() {
 number_in_japanese() {
     local number=$1
     case $number in
-        1) echo "一" ;;
-        2) echo "二" ;;
-        3) echo "三" ;;
-        4) echo "四" ;;
-        5) echo "五" ;;
-        6) echo "六" ;;
+        1) echo "󰊠" ;;
+        2) echo "󰊠" ;;
+        3) echo "󰊠" ;;
+        4) echo "󰊠" ;;
+        5) echo "󰊠" ;;
+        6) echo "󰊠" ;;
         *) echo "$number" ;;
     esac
 }
@@ -48,7 +48,7 @@ print_workspaces() {
         local arabic_number=$(roman_to_arabic "$d")
         local japanese_number=$(number_in_japanese "$arabic_number")
         if contains "$focused_desktop" "$d"; then
-            icon="$japanese_number"
+            icon="󰮯"
             class="workspace-focused"
         elif contains "$occupied_desktops" "$d"; then
             icon="$japanese_number"
