@@ -1,5 +1,3 @@
-# xOnlinEx
-### Thanks for dropping by!
 Here are some details about my setup:
 
 |       WM      | bspwm      |
@@ -11,5 +9,4 @@ Here are some details about my setup:
 | Launcher Apps |    rofi    |
 
 ### Screenshot
-![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/1.png)
-![Image text](https://github.com/xOnlinEx/bspwm/blob/main/.screenshots/2.png)
+![Image text](https://github.com/xOnlinEx/bspwm-dots/blob/main/asserts/desktop.png)
