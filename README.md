@@ -4,7 +4,7 @@ Here are some details about my setup:
 |:-------------:|------------|
 |       OS      | Arch Linux |
 |    Terminal   |    Kitty   |
-|      Bar      |     Eww    |
+|      Bar      | Polybar    |
 |   Compositor  |   picom    |
 | Launcher Apps |    rofi    |
 
