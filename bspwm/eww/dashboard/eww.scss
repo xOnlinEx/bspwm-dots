@@ -1,0 +1,73 @@
+* {
+    all: unset;
+}
+
+$background: #0d0c0c;
+$background-alt: #181616;
+$foreground: #c5c9c5;
+
+$black: #87a987;
+$red: #e05f65;
+$green: #8a9a7b;
+$yellow: #f1cf8a;
+$blue: #8ba4b0;
+$magenta: #c68aee;
+$cyan: #74bee9;
+$white: #dee1e6;
+
+.main {
+    border-radius: 10px;
+    padding: 20px;
+    background: $background;
+}   
+
+.info {
+    font-family: 'Iosevka NF';
+    background: $background-alt;
+    border-radius: 10px;
+    margin: 0 0 20px 0;
+}
+
+.image {
+    padding: 15px;
+}
+
+.fetch {
+    font-size: 1rem;
+    padding: 0 15px 0 15px;
+    min-height: 100px;
+}
+
+.name {
+    font-size: 1.8rem;
+}
+
+.username {
+    font-size: 1.2rem;
+}
+
+.volbar trough highlight {
+    background: $blue;
+    border-radius: 5px;
+}
+
+
+scale trough {
+    background: $background;
+    border-radius: 5px;
+    min-height: 25px;
+    min-width: 200px;
+}
+.volume{
+    background: $background-alt;
+    border-radius: 10px;
+    padding: 20px;
+}
+.icon-vol{
+    font-size: 1.8rem;
+    color: $blue;
+}
+.value-vol{
+    font-size: 1.2rem;
+    font-family: "Iosevka NF";
+}

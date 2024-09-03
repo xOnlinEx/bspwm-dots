@@ -11,14 +11,14 @@
 #	- daniel.floresvargas666@gmail.com
 #
 
-bspc monitor -d I II III IV V VI
+bspc monitor -d I II III IV V
 
-bspc config top_padding         10
-bspc config left_padding        70
-bspc config right_padding       10
-bspc config bottom_padding      10
-bspc config border_width        2
-bspc config window_gap          10
+bspc config top_padding         55
+bspc config left_padding        5
+bspc config right_padding       5
+bspc config bottom_padding      5
+bspc config border_width        0
+bspc config window_gap          15
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -28,18 +28,19 @@ bspc config gapless_monocle      true
 bspc config normal_frame_opacity 1
 bspc config focused_frame_opacity 1
 
-bspc config focused_border_color        "#8a9a7b"
-bspc config normal_border_color         "#181616"
+bspc config focused_border_color        "#c68aee"
+bspc config normal_border_color         "#101419"
 
 
 # Reload sxhkd daemon
 sxhkd -c "$HOME"/.config/bspwm/sxhkdrc &
 
 # Launch bar
-eww -c "$HOME"/.config/bspwm/eww/bar open bar &
+#eww -c "$HOME"/.config/bspwm/eww/bar open bar &
+"$HOME"/.config/bspwm/polybar/launch.sh &
 
 # Launch dunst notification daemon
-dunst -config "$HOME"/.config/bspwm/dunstrc &
+#dunst -config "$HOME"/.config/bspwm/dunstrc &
 
 # Fix cursor
 xsetroot -cursor_name left_ptr &
@@ -56,5 +57,9 @@ pidof -q picom || { picom --config "$HOME"/.config/bspwm/picom.conf & }
 #xwinwrap -fs -fdt -ni -b -nf -un -o 1.0 -debug -- mpv -wid WID --loop --no-audio ~/Videos/wallpapers_live/umbrella-anime.mp4 &
 
 # Java Aplications
-#wmname LG3D &
-#export _JAVA_AWT_WM_NONREPARENTING=1 &
+wmname LG3D &
+export _JAVA_AWT_WM_NONREPARENTING=1 &
+
+# Launch polkit
+pidof -q polkit-gnome-authentication-agent-1 || { /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & }
+

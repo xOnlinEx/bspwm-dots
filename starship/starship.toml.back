@@ -1,0 +1,73 @@
+# Luke Davis (http://luke.onl) Starship Configuration
+
+format = """
+$username \
+$directory \
+$git_branch \
+$git_status\
+$fill\
+[](fg:black)\
+${custom.live-clock-icon}\
+$time\
+[](fg:black)\
+\n$character
+"""
+
+add_newline = false
+
+[line_break]
+disabled = true
+
+[fill]
+symbol = " "
+
+[character]
+success_symbol = "[󰘧](bold white)"
+error_symbol = "[󰘧](bold red)"
+
+[directory]
+format = "[in](italic) [$path](bold bright-blue)"
+truncation_length = 3
+truncation_symbol = "…/"
+home_symbol = "~"
+read_only = " "
+
+[username]
+style_user = "bright-purple bold"
+style_root = "bright-red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[git_status]
+untracked = "[ ](yellow)"
+modified = "[ ](red)"
+staged = "[ ](green)"
+deleted = "[ ](red)"
+ahead = "[ ](yellow)"
+behind = "[ ](yellow)"
+diverged = "[󰦻 ](cyan)"
+conflicted = "[! ](red)"
+stashed = ""
+typechanged = ""
+renamed = ""
+up_to_date = ""
+format = '$all_status$ahead_behind'
+
+[git_branch]
+symbol = "[](black)"
+style = "fg:white bg:black"
+format = '[$symbol $branch]($style)[](black)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:bright-blue bg:black"
+format = '[$time]($style)'
+
+[custom.live-clock-icon]
+command = 'echo "" | cut -c $(($(date +%H)%12+1))'
+description = "Live updating clock icon, changes hourly. Icons can be customized to your liking."
+when = true
+style = "fg:bright-blue bg:black"
+format = "[$output ]($style)"

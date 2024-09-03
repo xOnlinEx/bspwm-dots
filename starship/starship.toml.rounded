@@ -3,7 +3,7 @@
 ## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
 
 # Sets user-defined palette
-palette = "kanagawa_dragon"
+palette = "dark_decay"
 add_newline = false 
 
 format="""
@@ -18,25 +18,25 @@ $cmd_duration \
 [fill]
 symbol = " "
 [java]
-symbol = "[ ](bg:background-alt fg:color7)"
-format = "[]($style)[${symbol}(${version} )](bg:background-alt fg:foreground)[]($style)"
-style = "bg:none fg:background-alt"
+symbol = "[](bg:black fg:yellow) "
+format = "[]($style)[${symbol}(${version} )](bg:black fg:white)[]($style)"
+style = "bg:none fg:black"
 
 # Prompt symbols 
 [character]
-success_symbol = "[](green bold)"
-error_symbol = "[](red)"
-vicmd_symbol = "[](green)"
+success_symbol = "[](green bold)"
+error_symbol = "[](red)"
+vicmd_symbol = "[](green)"
 
 [directory]
-format = "[]($style)[ ](bg:background-alt fg:foreground)[$path ](bg:background-alt fg:foreground bold)[]($style)"
-style = "bg:none fg:background-alt"
+format = "[]($style)[  ](bg:black fg:blue)[$path](bg:black fg:white bold)[]($style)"
+style = "bg:none fg:black"
 truncation_length = 3
-truncate_to_repo = false
+truncate_to_repo=false
 
 [git_branch]
-format = "[]($style)[[ ](bg:background-alt fg:color3 bold)$branch](bg:background-alt fg:foreground)[]($style)"
-style = "bg:none fg:background"
+format = "[]($style)[[ ](bg:black fg:yellow bold)$branch](bg:black fg:white)[]($style)"
+style = "bg:none fg:black"
 
 [git_status]
 # $all status$ahead_behind
@@ -56,9 +56,9 @@ deleted = "${count}"
 
 [cmd_duration]
 min_time = 2000 # 2seg
-format = "[]($style)[[󰀠 ](bg:background-alt fg:color1 bold)$duration](bg:background-alt fg:foreground)[]($style)"
+format = "[]($style)[[󱦟 ](bg:black fg:red bold)$duration](bg:black fg:white)[]($style)"
 disabled = false
-style = "bg:none fg:background-alt"
+style = "bg:none fg:black"
 
 [palettes.dark_decay]
 blue = "#70a5eb"
@@ -71,14 +71,3 @@ yellow = "#f1cf8a"
 magenta = "#c68aee"
 cyan = "#74bee9"
 white = "#dee1e6"
-[palettes.kanagawa_dragon]
-background = "#0d0c0c"
-background-alt = "#181616"
-foreground = "#c5c9c5"
-color1 = "#c4746e"
-color2 = "#8a9a7b"
-color3 = "#c4b28a"
-color4 = "#8ba4b0"
-color5 = "#a292a3"
-color6 = "#8ea4a2"
-color7 = "#b6927b"

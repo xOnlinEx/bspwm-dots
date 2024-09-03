@@ -1,0 +1,87 @@
+
+(defvar volum false)
+(defpoll volume_icon :interval "1s" "scripts/volume.sh --icon")
+(defpoll volume_value :interval "1s" "scripts/volume.sh")
+(defpoll volume_v :interval "1s" "scripts/volume2.sh")
+
+
+
+(defwidget info[]
+  (box
+    :class "info"
+    :space-evenly false
+    (image
+      :class "image"
+      :path "/home/xonlinex/.config/bspwm/eww/dashboard/images/avatar-rounded.png"
+      :image-width 100
+    )
+    (box
+      :class "fetch"
+      :orientation "v"
+      (label
+        :class "name"
+        :text "xOnlinEx"
+        :valign "end"
+      )
+      (label
+        :class "username"
+        :text "Backend Developer"
+        :valign "start"
+      )
+    )
+  )
+  
+)
+
+(defwidget volume []
+  (box
+    :class "volume"
+    :space-evenly false
+    :spacing 15
+    (label
+      :class "icon-vol"
+      :text "󰕾"
+      :spacing false
+    )
+    (box
+      :class "volbar"
+      (eventbox
+        :onhover "${EWW_CMD} update volum=true"
+        :onhoverlost "${EWW_CMD} update volum=false"
+        :cursor "pointer"
+        (scale
+          :class "volbar"
+          :value volume_value
+          :onchange "pamixer --set-volume {}"
+          :orientation "h"
+          :max 100
+          :min 0
+        )
+      )
+    )
+    (label
+      :class "value-vol"
+      :text volume_v
+    )
+  )
+)
+(defwidget main []
+  (box
+    :class "main"
+    :orientation "v"
+    :space-evenly false
+    (info)
+    (volume)
+  )
+  
+)
+(defwindow dashboard
+  :monitor 0
+  :geometry (geometry :x "20px"
+    :y "60px"
+    :width "350px"
+    :height "250px"
+  :anchor "top left")
+  :stacking "fg"
+  :wm-ignore false
+  (main))
